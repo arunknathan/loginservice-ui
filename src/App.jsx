@@ -19,8 +19,7 @@ function App() {
         },
         body: JSON.stringify({ username, password })
       })
-      console.log('authenticated='+response.ok)
-      setDoLogin(false)
+      setDoLogin(!response.ok)
     } catch (err) {
       setStatus('server error')
     }
